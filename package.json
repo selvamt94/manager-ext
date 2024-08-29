@@ -1,6 +1,6 @@
 {
   "name": "manager-ext",
-  "version": "1.0.0",
+  "version": "1.0.0-rancher-2.9.0",
   "private": false,
   "engines": {
     "node": ">=16"
@@ -41,6 +41,7 @@
   },
   "resolutions": {
     "**/webpack": "4",
-    "@types/node": "^16"
+    "@types/node": "^16",
+    "@achrinza/node-ipc": "9.2.5"
   }
 }
