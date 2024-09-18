@@ -2,9 +2,14 @@ name: Build and Release Extension Charts
 
 on:
   workflow_dispatch:
-    inputs:
-      release:
-        description: 'Release tag'
+  # push:
+  #   branches:
+  #     - main
+  pull_request:
+    branches:
+      - nv-5.3-rh-2.9.0
+  release:
+    types: [released]
 
 defaults:
   run:
@@ -21,4 +26,4 @@ jobs:
       pages: write
     with:
       target_branch: gh-pages
-      tagged_release: ${{ github.event.inputs.release }}
+      tagged_release: ${{ github.ref_name }}
